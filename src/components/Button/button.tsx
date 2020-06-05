@@ -1,18 +1,9 @@
 import React from "react";
 import classnames from "classnames";
 
-// 按钮大小
-export enum ButtonSize {
-  Large = "lg",
-  Small = "sm",
-}
-// 按钮类型
-export enum ButtonType {
-  Primary = "primary",
-  Default = "default",
-  Danger = "danger",
-  Link = "link",
-}
+
+type ButtonSize = 'lg' | 'sm'
+type ButtonType = "primary" | "default" | "danger" | "link";
 // 按钮的props
 interface BaseButtonProps {
   className?: string;
@@ -45,9 +36,9 @@ const Button: React.FC<ButtonProps>= (props) => {
   const classes = classnames("echo-btn", className, {
     [`echo-btn-${btnType}`]: btnType,
     [`echo-btn-${size}`]: size,
-    "echo-disabled": btnType === ButtonType.Link && disabled,
+    "echo-disabled": btnType === "link" && disabled,
   });
-  if (btnType === ButtonType.Link && href) {
+  if (btnType === "link" && href) {
     return (
       <a href={href} className={classes} {...resetProps}>
         {children}
@@ -65,7 +56,7 @@ const Button: React.FC<ButtonProps>= (props) => {
 
 Button.defaultProps = {
   disabled: false,
-  btnType: ButtonType.Default,
+  btnType: "default",
 };
 
 export default Button;

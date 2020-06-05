@@ -19,6 +19,7 @@
   cursor: pointer;
   transition: $btn-transition;
   &.echo-disabled,
+  //  &.echo-button-disabled
   &[disabled] {
     cursor: not-allowed;
     opacity: $btn-disabled-opacity;
@@ -80,6 +81,7 @@
     box-shadow: none;
   }
   &:disabled,
+  //  &.echo-button-disabled
   &.echo-disabled {
     color: $btn-link-disabled-color;
     pointer-events: none;

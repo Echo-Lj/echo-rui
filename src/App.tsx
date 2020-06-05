@@ -1,11 +1,11 @@
 import React from "react";
 import "./styles/index.scss";
-// import Button, { ButtonType, ButtonSize } from "./components/Button/button";
-import Alert, { AlertType } from "./components/Alert/alert";
+import Button from "./components/Button/button";
+// import Alert, { AlertType } from "./components/Alert/alert";
 function App() {
   return (
     <div className="App">
-      <div style={{ marginTop: "20px" }}>
+      {/**<div style={{ marginTop: "20px" }}>
         <Alert
           type={AlertType.Success}
           message="alert 提示语"
@@ -22,16 +22,16 @@ function App() {
       </div>
       <div style={{ marginTop: "20px" }}>
         <Alert type={AlertType.Error} closable={false} message="alert 提示语" />
-      </div>
+      </div>**/}
       
-      {/**<Button>hello</Button>
+      <Button>hello</Button>
       <Button disabled>hello</Button>
-      <Button btnType={ButtonType.Primary} size={ButtonSize.Small}>
+      <Button btnType="primary" size="sm">
         hello
       </Button>
       <Button
-        btnType={ButtonType.Danger}
-        size={ButtonSize.Large}
+        btnType="danger"
+        size="lg"
         onClick={() => {
           alert(111);
         }}
@@ -39,15 +39,15 @@ function App() {
         hello
       </Button>
       <Button
-        btnType={ButtonType.Link}
+        btnType="link"
         href="http://www.baidu.com"
         target="_blank"
       >
         hello
       </Button>
-      <Button disabled btnType={ButtonType.Link} href="http://www.baidu.com">
+      <Button disabled btnType="link" href="http://www.baidu.com">
         hello
-      </Button>**/}
+      </Button>
     </div>
   );
 }
