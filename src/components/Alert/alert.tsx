@@ -8,15 +8,17 @@ export enum AlertType {
   Error = "error",
 }
 
+
 export interface AlertProps {
   message: string;
   type?: AlertType;
   closable?: boolean;
   onClose?: Function;
+  title?: string;
 }
 
 const Alert: React.FC<AlertProps> = (props) => {
-  const { message, type, closable, onClose } = props;
+  const { message, type, closable, onClose, title } = props;
   const classes = classnames("echo-alert", {
     [`echo-alert-${type}`]: type,
   });
@@ -29,10 +31,15 @@ const Alert: React.FC<AlertProps> = (props) => {
   const [show, setShow] = useState(true);
   if (show) {
     return (
-      <div className={classes}>
+      <div className={classes} data-testid="alert">
+        <h6 className="lin-alert-title">{title}</h6>
         <p className="echo-alert-message">{message}</p>
         {closable ? (
-          <span className="echo-alert-close" onClick={OnClose}>
+          <span
+            className="lin-alert-close"
+            onClick={OnClose}
+            data-testid="close"
+          >
             x
           </span>
         ) : null}
