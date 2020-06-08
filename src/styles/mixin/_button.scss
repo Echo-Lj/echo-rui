@@ -29,14 +29,9 @@
     outline: none;
   }
   &:disabled,
-  &.echo-button-disabled {
+  &.lin-button-disabled {
     color: $color;
     background: $background;
     border-color: $border;
   }
-}
-
-@mixin alert-style($background-color, $border-color) {
-  background-color: $background-color;
-  border: $alert-border-width solid $border-color;
 }

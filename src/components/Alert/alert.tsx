@@ -32,7 +32,7 @@ const Alert: React.FC<AlertProps> = (props) => {
   if (show) {
     return (
       <div className={classes} data-testid="alert">
-        <h6 className="lin-alert-title">{title}</h6>
+         {title ? <h6 className="lin-alert-title">{title}</h6> : null}
         <p className="echo-alert-message">{message}</p>
         {closable ? (
           <span
