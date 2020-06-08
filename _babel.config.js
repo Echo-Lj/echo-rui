@@ -7,11 +7,7 @@ module.exports = {
         libraryName: "echo-rui", 
         camel2DashComponentName: false, // 是否需要驼峰转短线
         camel2UnderlineComponentName: false, // 是否需要驼峰转下划线
-        customName: function (name) {
-          console.log(name);
-
-          return `echo-rui/dist/components/${name}`;
-        },
+        libraryDirectory: "dist/components",
         style: "css",
       },
     ],
