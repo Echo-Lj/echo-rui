@@ -22,7 +22,8 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React from "react";
 import classnames from "classnames";
-var Button = function (props) {
+// 使用react-docgen-typescript-loader的bug，只能使用FC，不能React.FC
+export var Button = function (props) {
     var _a;
     var disabled = props.disabled, size = props.size, btnType = props.btnType, children = props.children, href = props.href, className = props.className, resetProps = __rest(props, ["disabled", "size", "btnType", "children", "href", "className"]);
     var classes = classnames("echo-btn", className, (_a = {},
