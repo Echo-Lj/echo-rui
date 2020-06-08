@@ -1,0 +1,39 @@
+.echo-alert {
+  padding: 0.375rem 0.75rem;
+  position: relative; }
+
+.echo-alert-success {
+  background-color: #eafbe2;
+  border: 1px solid #6ae32e; }
+
+.echo-alert-info {
+  background-color: #d4f5fa;
+  border: 1px solid #1fc8e3; }
+
+.echo-alert-warning {
+  background-color: #fef6c3;
+  border: 1px solid #fbe346; }
+
+.echo-alert-error {
+  background-color: #fae3e5;
+  border: 1px solid #e4606d; }
+
+.echo-alert-message {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400; }
+
+.echo-alert-title {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400; }
+
+.echo-alert-close {
+  position: absolute;
+  top: 0.375rem;
+  right: 0.75rem;
+  cursor: pointer; }

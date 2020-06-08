@@ -15,7 +15,7 @@ describe("Button 组件", () => {
     expect(element.tagName).toEqual("BUTTON");
      // 判断是否有类名
      expect(element).toHaveClass("echo-btn-default");
-     expect(element).not.toHaveClass("echo-disabled");
+    expect(element).not.toHaveClass("echo-disabled");
      //   触发点击事件
     fireEvent.click(element);
     expect(testProps.onClick).toHaveBeenCalled();
