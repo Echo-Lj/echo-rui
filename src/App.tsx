@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/index.scss";
 import Button from "./components/Button/button";
+import Icon from "./components/Icon/icon";
 // import Alert, { AlertType } from "./components/Alert/alert";
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
       <div style={{ marginTop: "20px" }}>
         <Alert type={AlertType.Error} closable={false} message="alert 提示语" />
       </div>**/}
-      
+      <Icon icon="coffee" size="5x" theme="danger" />
+      <Icon icon="arrow-down" size="5x" />
       <Button>hello</Button>
       <Button disabled>hello</Button>
       <Button btnType="primary" size="sm">

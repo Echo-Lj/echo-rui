@@ -1,9 +1,12 @@
 import React from "react";
 import "./styles/index.scss";
 import Button from "./components/Button/button";
+import Icon from "./components/Icon/icon";
 // import Alert, { AlertType } from "./components/Alert/alert";
 function App() {
     return (React.createElement("div", { className: "App" },
+        React.createElement(Icon, { icon: "coffee", size: "5x", theme: "danger" }),
+        React.createElement(Icon, { icon: "arrow-down", size: "5x" }),
         React.createElement(Button, null, "hello"),
         React.createElement(Button, { disabled: true }, "hello"),
         React.createElement(Button, { btnType: "primary", size: "sm" }, "hello"),
