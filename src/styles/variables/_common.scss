@@ -29,6 +29,10 @@ $warning: $yellow !default;
 $danger: $red !default;
 $light: $gray-100 !default;
 $dark: $gray-800 !default;
+$text-color: fade($black, 65%);
+$text-color-inverse: $white;
+
+
 
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
@@ -43,6 +47,9 @@ $font-size-lg: $font-size-base * 1.25 !default;
 $font-size-sm: $font-size-base * 0.875 !default;
 $font-size-root: null !default;
 
+$font-variant-base: tabular-nums;
+$font-feature-settings-base: 'tnum';
+
 // 字重
 $font-weight-lighter: lighter !default;
 $font-weight-light: 300 !default;
@@ -51,6 +58,67 @@ $font-weight-bold: 700 !default;
 $font-weight-bolder: bolder !default;
 $font-weight-base: $font-weight-normal !default;
 
+// Animation
+$ease-base-out: cubic-bezier(0.7, 0.3, 0.1, 1);
+$ease-base-in: cubic-bezier(0.9, 0, 0.3, 0.7);
+$ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+$ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+$ease-out-back: cubic-bezier(0.12, 0.4, 0.29, 1.46);
+$ease-in-back: cubic-bezier(0.71, -0.46, 0.88, 0.6);
+$ease-in-out-back: cubic-bezier(0.71, -0.46, 0.29, 1.46);
+$ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
+$ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+$ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+$ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+
+
+
+$background-color-light: hsv(0, 0, 98%); // background of header and selected item
+$background-color-base: hsv(0, 0, 96%);
+
+
+
+// vertical paddings
+$padding-lg: 24px; // containers
+$padding-md: 16px; // small containers and buttons
+$padding-sm: 12px; // Form controls and items
+$padding-xs: 8px; // small items
+$padding-xss: 4px; // more small
+
+
+// height rules
+$height-base: 32px;
+$height-lg: 40px;
+$height-sm: 24px;
+
+// vertical padding for all form controls
+$control-padding-horizontal: $padding-sm;
+$control-padding-horizontal-sm: $padding-xs;
+
+// Disabled states
+$disabled-color: fade(#000, 25%);
+$disabled-bg: $background-color-base;
+$disabled-color-dark: fade(#fff, 35%);
+
+// Radio
+$radio-size: 16px;
+$radio-top: 0px;
+$radio-dot-color: $primary;
+$radio-dot-disabled-color: fade($black, 20%);
+$radio-solid-checked-color: $white;
+
+// Radio buttons
+$radio-button-bg: $primary;
+$radio-button-checked-bg: $primary;
+$radio-button-color: $text-color;
+$radio-button-hover-color: $primary;
+$radio-button-active-color: $primary;
+$radio-disabled-button-checked-bg: tint($black, 90%);
+$radio-disabled-button-checked-color: $text-color-inverse;
+$radio-wrapper-margin-right: 8px;
 // 行高
 $line-height-base: 1.5 !default;
 $line-height-lg: 2 !default;
@@ -155,8 +223,13 @@ $enable-pointer-cursor-for-buttons: true !default;
 // 边框 和 border radius
 
 $border-width: 1px !default;
+$border-width-base: 1px !default;
+$border-style-base: solid;
+$border-color-base: hsv(0, 0, 85%);
+$border-radius-base: 2px;
 $border-color: $gray-300 !default;
 
+$border-radius: 0.25rem !default;
 $border-radius: 0.25rem !default;
 $border-radius-lg: 0.3rem !default;
 $border-radius-sm: 0.2rem !default;
@@ -166,3 +239,17 @@ $box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
 $box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
 $box-shadow-lg: 0 1rem 3rem rgba($black, 0.175) !default;
 $box-shadow-inset: inset 0 1px 2px rgba($black, 0.075) !default;
+
+
+@mixin reset-component{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+  font-size: $font-size-base;
+  font-variant: $font-variant-base;
+  line-height: $line-height-base;
+  list-style: none;
+  font-feature-settings: $font-feature-settings-base;
+  
+}
